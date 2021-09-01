@@ -3,7 +3,7 @@ from django.views import View
 from selenium import webdriver
 
 from .models import MenuItem, Category, OrderModel
-from selenium import webdriver
+
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -78,7 +78,7 @@ class User(View):
              print(name,email)
          send_mail(
             'Order Confirmation',
-            'Hello ' + name + ", \n Your order has been submitted. \nThank you for your support. \n\n\n\nThanks and Regards,\nUrban Jungle",
+            'Hello ' + str(name) + ", \n Your order has been submitted. \nThank you for your support. \n\n\n\nThanks and Regards,\nUrban Jungle",
             settings.EMAIL_HOST_USER,
             [email],
             fail_silently=False)
