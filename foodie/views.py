@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.views import View
-from selenium import webdriver
-
+from django.http import HttpResponseRedirect
 from .models import MenuItem, Category, OrderModel
 
 from django.core.mail import send_mail
@@ -78,21 +77,12 @@ class User(View):
              print(name,email)
          send_mail(
             'Order Confirmation',
-            'Hello ' + str(name) + ", \n Your order has been submitted. \nThank you for your support. \n\n\n\nThanks and Regards,\nUrban Jungle",
+            'Hello ' + str(name) + ", \n Your order has been submitted. \nThank you for your support. Please click on the following:\nhttp://127.0.0.1:8000/Checkout/ \n\n\n\nThanks and Regards,\nUrban Jungle ",
             settings.EMAIL_HOST_USER,
             [email],
             fail_silently=False)
-         context = {
-             'name' : name,
-             'phno' : phno,
-            'email' : email
 
-         }
-
-
-         return render(request, 'final.html',context)
-
-
+         return render(request, 'checkout.html')
 
 class Final(View):
      def get(self, request, *args, **kwargs):
