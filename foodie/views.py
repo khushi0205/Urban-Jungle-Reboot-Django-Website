@@ -82,12 +82,18 @@ class User(View):
             settings.EMAIL_HOST_USER,
             [email],
             fail_silently=False)
+         context = {
+             'name' : name,
+             'phno' : phno,
+            'email' : email
+
+         }
 
 
-         return render(request, 'checkout.html')
+         return render(request, 'final.html',context)
 
 
 
 class Final(View):
      def get(self, request, *args, **kwargs):
-         return render(request,'info.php')
+         return render(request,'final.html')
