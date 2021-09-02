@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 from foodie.views import Index, About, Order,User, Final
 from django.views.static import serve
 from django.conf.urls import url
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Index.as_view(), name='index'),
