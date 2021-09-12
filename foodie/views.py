@@ -4,7 +4,6 @@ from django.http import HttpResponseRedirect
 from .models import MenuItem, Category, OrderModel
 from django.core.mail import send_mail
 from django.conf import settings
-from plyer import notification
 import datetime
 class Index(View):
     def get(self, request, *args, **kwargs):
