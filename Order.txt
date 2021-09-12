@@ -1,6 +1,0 @@
-{'items': [{'id': 27, 'name': 'Chicken Manchurian', 'price': Decimal('300.00')}, {'id': 17, 'name': 'wine', 'price': Decimal('300.00')}], 'price': Decimal('600.00')}NoneNoneNoneKhushi+919689039484khushi.sali2002@gmail.comKhushi
-+919689039484
-khushi.sali2002@gmail.com
-Khushi
-+919689039484
-khushi.sali2002@gmail.com

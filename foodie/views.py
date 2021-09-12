@@ -5,6 +5,7 @@ from .models import MenuItem, Category, OrderModel
 from django.core.mail import send_mail
 from django.conf import settings
 from plyer import notification
+import datetime
 class Index(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'index.html')
@@ -64,7 +65,10 @@ class Order(View):
             'items': order_items['items'],
             'price': price
         }
-        with open('Order.txt', 'w') as f:
+        with open('Order.txt', 'a') as f:
+            f.write("\n")
+            f.write(str(datetime.datetime.now()))
+            f.write("\n")
             f.write(str(context))
             f.write("\n")
 
