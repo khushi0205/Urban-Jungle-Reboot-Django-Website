@@ -1,8 +1,5 @@
 {% extends 'base.html' %} {% block content %}
-<div class="container mb-5">
-  <div class="row justify-content-center mt-5" style="color: white;
-  background: black;">
-    <div class="col-md-8 col-sm-12 offset-md-1 p-4 text-center">
+<div class="container">
       <h1 style="font: revert;font-size: xxx-large;">About Us!</h1>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -14,6 +11,31 @@
       <style type="text/css">
         .carousel-inner img {
           height: 289px;
+        }
+        .carousel-inner {
+    position: relative;
+    width: 70%;
+    overflow: hidden;
+    left: 125px;
+
+}
+        .container{
+          background: black;
+    color: white;
+    margin-top: 12px;
+    text-align: center;
+    width: 875px;
+    height: 615px;
+        }
+        @media (max-width:750px){
+            .container {
+    width: 341px;
+    height: 1011px;
+}
+    .carousel-inner {
+    width: 83%;
+    left: 24px;
+}
         }
       </style>
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -28,9 +50,7 @@
             <img src="/static/img/res2.png" class="d-block w-100" alt="...">
           </div>
         </div>
-      </div>
-    </div>
-    <div class="col-md-10 col-sm-12 offset-md-1 p-4 text-center">
+
       <p style="
       color: wheat;
     font-size: x-large;
@@ -39,14 +59,10 @@
         and has a warm friendly feeling to it. The food is made to perfection, our chefs only cook with the freshest
         ingredients, carefully sourced and provenance assured.
         The restaurant is quite open planned but has more private dining areas. Online food delivery available during
-        pandemic. We all welcome welcome you to our restaurant and hoping to see you there.
+        pandemic. We all welcome you to our restaurant and hoping to see you there.
 
       </p>
 
-  </div>
-  <div class="row justify-content-center mt-1">
-    
-    </div>
-  </div>
+
 </div>
 {% endblock %}

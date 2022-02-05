@@ -2,10 +2,7 @@
 
 {% block content %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<div class="container mb-5" style="background: black;
-color: wheat;">
-    <div class="row justify-content-center mt-1">
-        <div class="row justify-content-center mt-5">
+<div class="container" style="background: black; color:wheat; text-align: -webkit-center;">
             <div class="col-md-5 col-sm-12 text-center">
                 <h1>Order Submitted!</h1>
                 <p>You should receive a confirmation email soon.</p>
@@ -15,8 +12,20 @@ color: wheat;">
     
                 <a href="{% url 'index' %}">Go to the homepage</a>
             </div>
-
-        </div>
-        </div>
 </div>
+<style>
+     body{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+@media (max-width: 750px){
+ body{
+    background-image: url(/static/img/idk2.jpeg);
+ }
+ }
+</style>
+
+
 {% endblock content %}

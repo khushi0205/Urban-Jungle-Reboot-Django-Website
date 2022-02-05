@@ -64,12 +64,7 @@ class Order(View):
             'items': order_items['items'],
             'price': price
         }
-        with open('Order.txt', 'a') as f:
-            f.write("\n")
-            f.write(str(datetime.datetime.now()))
-            f.write("\n")
-            f.write(str(context))
-            f.write("\n")
+        
 
         return render(request,'order_confirmation.html', context)
 
@@ -80,16 +75,7 @@ class User(View):
              phno = request.GET.get('phno')
              email = request.GET.get('email')
              print(name,email)
-             with open('Order.txt', 'a') as f:
-                 f.write(str(name),)
-                 f.write("\n")
-
-                 f.write(str(phno))
-                 f.write("\n")
-
-                 f.write(str(email))
-                 f.write("\n")
-
+            
          send_mail(
             'Order Confirmation',
             'Hello ' + str(name) + ", \n Your order has been submitted. \nThank you for your support. \n\n\n\nThanks and Regards,\nUrban Jungle ",

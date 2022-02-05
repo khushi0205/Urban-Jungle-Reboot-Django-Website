@@ -1,27 +1,80 @@
 {% extends 'base.html' %} {% block content %}
-
-<div class="responsive">
-  <div class="row justify-content-center mt-5">
-    <div class="col-md-8 col-sm-12 offset-md-1 p-4 text-center" style="    left: 534px; top: -37px;" >
-<img src="/static/img/URBAN JUNGLE.png" style="
-    height: 232px;
-">
-</div>
-</div>
+<body>
+<div class="container">
+  <div class="box">
+<img src="/static/img/URBAN JUNGLE.png" >
   </div>
-
-<div class="container mb-5">
-  <div class="row justify-content-center mt-5">
-    <div class="col-md-8 col-sm-12 offset-md-1 p-4 text-center" style="top: -99px;" >
-
+<div class="box12">
+<div class="box1">
       <a href="#" ><img src="https://fontmeme.com/permalink/210725/3fe735367dbd078b05a4780e492bb3c8.png" alt="plush-font" border="0
-"></a>
-      <a href="{% url 'order' %}" ><img src="/static/img/renew.png"></a>
-
-    </div>
-  </div>
+" style="top: -99px;"></a>
 </div>
+  <div class="box2">
+      <a href="{% url 'order' %}" ><img src="/static/img/renew.png"></a>
+</div>
+</div>
+</div>
+</body>
+<style>
+    body{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
 
+
+}
+  .container{
+    width: 100%;
+  }
+  .container .box{
+
+    margin-left: 1065px;
+    margin-top: 22px;
+  }
+  .container .box img{
+      height: 232px;
+  }
+  .container .box1{
+    margin-left: 250px;
+  }
+  .container .box2{
+    margin-left: 300px;
+  }
+  .container .box12{
+    margin-top: 90px;
+  }
+ @media (max-width: 750px){
+ body{
+    background-image: url(/static/img/idk2.jpeg);
+ }
+
+    .container .box{
+
+    margin-left: 72px;
+    margin-top: 74px;
+  }
+  .container .box img{
+      height: 190px;
+  }
+  .container .box1{
+    margin-left: 26px;
+  }
+  .container .box2{
+    margin-left: 47px;
+  }
+  .container .box12{
+    margin-top: 68px;
+    margin-left: -30px;
+  }
+  .container .box12 .box1 a img{
+      height: 32px;
+  }
+  .container .box12 .box2 a img{
+      height: 104px;
+  }
+ }
+</style>
 
 {% endblock %}
 

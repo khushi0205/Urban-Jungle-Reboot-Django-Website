@@ -2,23 +2,33 @@
 
 {% block content %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<div class="container mb-5" style="background: black;
-color: wheat;">
-    <div class="row justify-content-center mt-1">
-
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-5 col-sm-12 text-center">
+<div class="container">
             <h3 class="pb-3">Order Summary:</h3>
             {% for item in items %}
                 <p>{{ item.name }} <span class="pl-3">{{ item.price }}</span></p>
             {% endfor %}
 
             <p class="font-weight-bold pt-4">Total: {{ price }}</p>
-        </div>
-    </div>
+
         <a href="{% url 'User' %}" button class="btn btn-dark">Proceed to Checkout</a>
     </div>
-</div>
 
-
+<style>
+    .container{
+        background: black;
+        color: wheat;
+        text-align: center;
+    }
+     body{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+@media (max-width: 750px){
+ body{
+    background-image: url(/static/img/idk2.jpeg);
+ }
+ }
+</style>
         {% endblock content %}
