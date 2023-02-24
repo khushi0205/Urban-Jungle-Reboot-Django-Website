@@ -4,7 +4,7 @@
         {
             "src": "ask/wsgi.py",
             "use": "@vercel/python",
-            "config": {"maxiLambdaSize": "300mb", "runtime": "python3.9", "memory": "300mb"}
+            "config": { "runtime": "python3.9"}
         }
     ],
     "routes": [
