@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "ask/wsgi.py",
+            "use": "@vercel/python",
+            "config": {"maxiLambdaSize": "15mb", "runtime": "python3.9"}
+        },
+        {
+            "src": "build_files.sh",
+            "use": "@vercel/assets",
+            "config": {
+                "distDir": "assets"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/static/(.*)",
+            "dest": "/static/$1" 
+        },
+        {
+            "src" : "/(.*)",
+            "dest": "ask/wsgi.py"
+        }
+    ]
+}
